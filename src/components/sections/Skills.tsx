@@ -2,38 +2,35 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { skillCategories, allSkills } from "@/data/portfolio";
+import { allSkills, skillCategories } from "@/data/portfolio";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
-const categoryMeta: Record<
-  string,
-  { icon: string; accent: string; span?: string }
-> = {
-  "AI/ML": {
-    icon: "◆",
-    accent: "from-white/20 via-white/5 to-transparent",
+const categoryMeta: Record<string, { icon: string; accent: string; span?: string }> = {
+  "AI / AI Agents": {
+    icon: "AI",
+    accent: "from-cyan-400/14 via-white/[0.04] to-transparent",
     span: "md:col-span-2 md:row-span-2",
   },
+  "Machine Learning": {
+    icon: "ML",
+    accent: "from-emerald-400/12 via-transparent to-transparent",
+  },
+  "Backend Systems": {
+    icon: "API",
+    accent: "from-blue-400/12 via-transparent to-transparent",
+  },
   Frontend: {
-    icon: "◇",
-    accent: "from-blue-500/10 via-transparent to-transparent",
+    icon: "UI",
+    accent: "from-fuchsia-400/10 via-transparent to-transparent",
   },
-  Backend: {
-    icon: "○",
-    accent: "from-emerald-500/10 via-transparent to-transparent",
-  },
-  Databases: {
-    icon: "▣",
-    accent: "from-violet-500/10 via-transparent to-transparent",
-  },
-  DevOps: {
-    icon: "⚙",
+  "DevOps & Tools": {
+    icon: "OPS",
     accent: "from-amber-500/10 via-transparent to-transparent",
   },
-  "Robotics & Vision": {
-    icon: "◎",
-    accent: "from-cyan-500/10 via-transparent to-transparent",
+  "Soft Skills": {
+    icon: "EQ",
+    accent: "from-rose-400/10 via-transparent to-transparent",
     span: "md:col-span-2",
   },
 };
@@ -49,7 +46,7 @@ function CategoryCard({
 }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-40px" });
-  const meta = categoryMeta[title] ?? { icon: "•", accent: "from-white/10 to-transparent" };
+  const meta = categoryMeta[title] ?? { icon: "SK", accent: "from-white/10 to-transparent" };
 
   return (
     <motion.div
@@ -58,7 +55,7 @@ function CategoryCard({
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       transition={{ delay: index * 0.08 }}
-      className={`group relative overflow-hidden rounded-2xl border border-white/[0.07] bg-white/[0.02] p-7 backdrop-blur-md transition-all duration-700 hover:border-white/[0.14] hover:bg-white/[0.04] ${meta.span ?? ""}`}
+      className={`group relative overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.025] p-6 backdrop-blur-md transition-all duration-700 hover:border-white/[0.16] hover:bg-white/[0.045] sm:p-7 ${meta.span ?? ""}`}
       whileHover={{ y: -6 }}
       data-cursor
     >
@@ -68,9 +65,9 @@ function CategoryCard({
       <div className="pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-white/[0.03] blur-2xl transition-opacity group-hover:opacity-100" />
 
       <div className="relative z-10">
-        <div className="mb-6 flex items-start justify-between">
+        <div className="mb-6 flex items-start justify-between gap-4">
           <div className="flex items-center gap-3">
-            <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.04] text-sm text-white/60">
+            <span className="flex h-10 min-w-10 items-center justify-center rounded-lg border border-white/[0.1] bg-black/30 px-2 text-[10px] font-semibold uppercase tracking-[0.14em] text-white/65">
               {meta.icon}
             </span>
             <div>
@@ -78,7 +75,7 @@ function CategoryCard({
                 {title}
               </h3>
               <p className="text-[10px] uppercase tracking-[0.2em] text-white/30">
-                {skills.length} technologies
+                {skills.length} skills
               </p>
             </div>
           </div>
@@ -87,11 +84,11 @@ function CategoryCard({
           </span>
         </div>
 
-        <div className="flex flex-wrap gap-2">
+        <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
           {skills.map((skill) => (
             <span
               key={skill}
-              className="rounded-lg border border-white/[0.06] bg-black/30 px-3 py-1.5 text-xs text-white/55 transition-all duration-500 group-hover:border-white/[0.12] group-hover:text-white/80"
+              className="flex min-h-10 items-center rounded-lg border border-white/[0.07] bg-black/35 px-3 py-2 text-xs leading-snug text-white/62 shadow-[inset_0_1px_0_rgba(255,255,255,0.035)] transition-all duration-500 group-hover:border-white/[0.13] group-hover:bg-white/[0.045] group-hover:text-white/86"
             >
               {skill}
             </span>
@@ -114,7 +111,7 @@ export function Skills() {
       id="skills"
       label="Expertise"
       title="Skills & Technologies"
-      subtitle="A curated stack for building intelligent, scalable AI products."
+      subtitle="A focused technical stack across AI agents, machine learning, backend systems, and product engineering."
     >
       <motion.div
         ref={gridRef}

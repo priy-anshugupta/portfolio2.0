@@ -201,35 +201,38 @@ export function LaptopScene() {
                 <div className="pointer-events-none absolute inset-0 z-[2] bg-[linear-gradient(112deg,rgba(255,255,255,0.11)_0%,transparent_27%,transparent_68%,rgba(255,255,255,0.045)_100%)]" />
                 <div className="pointer-events-none absolute inset-0 z-[3] bg-[radial-gradient(circle_at_50%_45%,transparent_0%,rgba(0,0,0,0.1)_58%,rgba(0,0,0,0.58)_100%)]" />
 
-                <div
-                  ref={contentRef}
-                  className="absolute inset-0 z-[4] flex items-center"
-                >
-                  <div className="mx-auto w-[85%] max-w-[720px]">
-                    <p className="mb-2 text-[clamp(0.5rem,0.85vw,0.72rem)] font-semibold uppercase tracking-[0.4em] text-white/45">
+                <div ref={contentRef} className="absolute inset-0 z-[4] flex items-center overflow-hidden py-[3%]">
+                  <div className="mx-auto w-[88%] max-w-[760px]">
+                    <p className="mb-[clamp(3px,0.5vw,8px)] text-[clamp(0.34rem,0.72vw,0.64rem)] font-semibold uppercase tracking-[0.28em] text-white/45">
                       About Me
                     </p>
-                    <h2 className="max-w-[700px] text-[clamp(1.18rem,2.55vw,2.35rem)] font-light leading-[1.08] tracking-normal text-white">
-                      Intelligent Systems, Cinematic Experiences
+                    <h2 className="max-w-[700px] text-[clamp(0.72rem,2.1vw,2.05rem)] font-light leading-[1.08] tracking-normal text-white">
+                      {aboutContent.tagline}
                     </h2>
-                    <p className="mt-[clamp(10px,1.35vw,17px)] max-w-[570px] text-[clamp(0.68rem,1.08vw,0.92rem)] leading-relaxed text-white/64">
+                    <p className="mt-[clamp(4px,1vw,13px)] max-w-[690px] text-[clamp(0.38rem,0.82vw,0.78rem)] leading-relaxed text-white/68">
                       {aboutContent.intro}
                     </p>
+                    <p className="mt-[clamp(4px,0.8vw,10px)] hidden max-w-[690px] text-[clamp(0.36rem,0.76vw,0.72rem)] leading-relaxed text-white/52 sm:block">
+                      {aboutContent.body}
+                    </p>
+                    <p className="mt-[clamp(4px,0.8vw,10px)] max-w-[690px] text-[clamp(0.36rem,0.72vw,0.68rem)] leading-relaxed text-white/46">
+                      {aboutContent.achievement}
+                    </p>
 
-                    <div className="mt-[clamp(13px,1.8vw,24px)] grid grid-cols-2 gap-[clamp(6px,0.8vw,10px)] sm:grid-cols-3">
+                    <div className="mt-[clamp(7px,1.3vw,16px)] hidden grid-cols-2 gap-[clamp(4px,0.62vw,8px)] sm:grid sm:grid-cols-3">
                       {focusCards.map((card) => (
                         <div
                           key={card.title}
-                          className="min-h-[clamp(30px,3.8vw,44px)] rounded-[7px] border border-white/[0.1] bg-white/[0.06] px-[clamp(8px,1vw,13px)] py-[clamp(7px,0.85vw,10px)] shadow-[inset_0_1px_0_rgba(255,255,255,0.07)] backdrop-blur-md"
+                          className="min-h-[clamp(24px,3vw,36px)] rounded-[7px] border border-white/[0.1] bg-white/[0.06] px-[clamp(7px,0.85vw,11px)] py-[clamp(5px,0.65vw,8px)] shadow-[inset_0_1px_0_rgba(255,255,255,0.07)] backdrop-blur-md"
                         >
-                          <span className="block text-[clamp(0.56rem,0.88vw,0.78rem)] font-medium leading-snug text-white/84">
+                          <span className="block text-[clamp(0.48rem,0.68vw,0.66rem)] font-medium leading-snug text-white/84">
                             {card.title}
                           </span>
                         </div>
                       ))}
                     </div>
 
-                    <p className="mt-[clamp(10px,1.35vw,16px)] max-w-[640px] text-[clamp(0.58rem,0.86vw,0.76rem)] italic leading-relaxed text-white/38">
+                    <p className="mt-[clamp(8px,1vw,12px)] hidden max-w-[650px] text-[clamp(0.48rem,0.68vw,0.64rem)] italic leading-relaxed text-white/38 md:block">
                       {aboutContent.closing}
                     </p>
                   </div>

@@ -36,29 +36,32 @@ export function Navbar() {
     >
       <nav
         className={cn(
-          "mx-auto flex max-w-7xl items-center justify-between rounded-full border px-6 py-3 transition-all duration-700",
+          "mx-auto flex max-w-7xl items-center justify-between rounded-full border px-6 py-3 shadow-[0_18px_70px_rgba(0,0,0,0.38),inset_0_1px_0_rgba(255,255,255,0.1)] backdrop-blur-xl transition-all duration-700",
           scrolled || menuOpen
-            ? "border-white/[0.08] bg-black/60 backdrop-blur-xl shadow-cinematic"
-            : "border-transparent bg-transparent"
+            ? "border-cyan-200/[0.14] bg-black/[0.72]"
+            : "border-white/[0.1] bg-black/[0.42]"
         )}
       >
+        <div className="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-cyan-200/35 to-transparent" />
+        <div className="pointer-events-none absolute inset-x-20 bottom-0 h-px bg-gradient-to-r from-transparent via-fuchsia-200/15 to-transparent" />
+
         <a
           href="#"
           data-cursor
-          className="text-sm font-medium tracking-tight text-white transition-opacity hover:opacity-70"
+          className="relative text-sm font-semibold tracking-tight text-white transition-opacity hover:opacity-80"
         >
           {siteConfig.name.split(" ")[0]}
-          <span className="text-white/40">.</span>
+          <span className="text-cyan-200/70">.</span>
         </a>
 
-        <ul className="hidden items-center gap-8 md:flex">
+        <ul className="hidden items-center gap-4 md:flex lg:gap-7">
           {navLinks.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
                 data-cursor
                 data-cursor-label={link.label}
-                className="text-xs font-medium uppercase tracking-[0.15em] text-white/50 transition-colors duration-300 hover:text-white"
+                className="text-[10px] font-medium uppercase tracking-[0.12em] text-white/50 transition-colors duration-300 hover:text-white lg:text-xs lg:tracking-[0.15em]"
               >
                 {link.label}
               </a>
@@ -67,15 +70,6 @@ export function Navbar() {
         </ul>
 
         <div className="flex items-center gap-3">
-          <a
-            href="#contact"
-            data-cursor
-            data-cursor-label="Contact"
-            className="hidden rounded-full border border-white/15 bg-white/[0.055] px-5 py-2 text-xs font-medium uppercase tracking-wider text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] transition-all duration-500 hover:border-white/30 hover:bg-white/[0.09] hover:shadow-[0_12px_34px_rgba(255,255,255,0.08)] md:inline-flex"
-          >
-            Contact
-          </a>
-
           <button
             type="button"
             aria-label="Toggle menu"

@@ -11,70 +11,100 @@ export const siteConfig = {
 
 export const navLinks = [
   { label: "About", href: "#about" },
+  { label: "Education", href: "#education" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
+  { label: "Achievements", href: "#achievements" },
   { label: "Contact", href: "#contact" },
 ];
 
 export const aboutContent = {
+  tagline: "Creating Systems That Think.",
   intro:
-    "I build intelligent AI systems combining modern frontend engineering with advanced backend AI architectures.",
+    "I'm Priyanshu Gupta, an Information Technology undergraduate at Vidyalankar Institute of Technology with a strong focus on Artificial Intelligence, Machine Learning, AI Agents, and scalable backend systems.",
+  body:
+    "I build intelligent real-world applications that combine AI with practical engineering. My work revolves around AI agents, RAG systems, automation workflows, backend architectures, and full stack AI products designed for performance and usability.",
+  achievement:
+    "I ranked #125 globally in HackerRank Orchestrate May 2026, competing with developers from 48 countries in a 24-hour AI agent engineering challenge.",
   focusAreas: [
-    "RAG pipelines",
-    "Multi-agent systems",
-    "AI automation",
-    "Robotics",
-    "Computer vision",
-    "Full-stack AI products",
+    "AI Agents",
+    "RAG Systems",
+    "Backend Architecture",
+    "Automation Workflows",
+    "Full Stack AI",
+    "System Design",
   ],
   closing:
-    "I enjoy creating products that combine cinematic user experiences with intelligent systems.",
+    "I enjoy turning complex ideas into functional, production-oriented software that creates measurable impact.",
 };
 
 export const skillCategories = [
   {
-    title: "AI/ML",
-    skills: ["Python", "LangChain", "AI Agents", "RAG Pipelines", "Vector Databases"],
+    title: "AI / AI Agents",
+    skills: [
+      "Python",
+      "Large Language Models (LLMs)",
+      "AI Agents",
+      "Multi-Agent Systems",
+      "Retrieval Augmented Generation (RAG)",
+      "LangChain",
+      "LangGraph",
+      "Vector Databases",
+      "Pinecone",
+      "ChromaDB",
+      "Agentic Workflows",
+    ],
+  },
+  {
+    title: "Machine Learning",
+    skills: ["TensorFlow", "PyTorch", "Scikit-learn", "OpenCV", "pandas", "numpy"],
+  },
+  {
+    title: "Backend Systems",
+    skills: ["FastAPI", "Django", "Flask", "REST APIs", "OAuth", "API Integration", "PostgreSQL"],
   },
   {
     title: "Frontend",
-    skills: ["TypeScript", "React", "Next.js", "Tailwind CSS"],
+    skills: ["React.js", "Next.js", "Tailwind CSS", "JavaScript", "Three.js", "Framer Motion", "Vite"],
   },
   {
-    title: "Backend",
-    skills: ["Python", "FastAPI", "TypeScript"],
+    title: "DevOps & Tools",
+    skills: ["Git", "GitHub", "VS Code", "Vercel", "Netlify"],
   },
   {
-    title: "Databases",
-    skills: ["PostgreSQL", "Firebase", "Vector Databases"],
-  },
-  {
-    title: "DevOps",
-    skills: ["GitHub Actions"],
-  },
-  {
-    title: "Robotics & Vision",
-    skills: ["OpenCV", "Robotics"],
+    title: "Soft Skills",
+    skills: [
+      "Problem Solving",
+      "Leadership",
+      "Communication",
+      "Team Collaboration",
+      "Critical Thinking",
+      "Fast Learning",
+      "Project Management",
+      "Public Speaking",
+    ],
   },
 ];
 
-export const allSkills = [
-  "Python",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Tailwind CSS",
-  "FastAPI",
-  "LangChain",
-  "PostgreSQL",
-  "Firebase",
-  "OpenCV",
-  "Vector Databases",
-  "AI Agents",
-  "RAG Pipelines",
-  "GitHub Actions",
-];
+export const allSkills = skillCategories.flatMap((category) => category.skills);
+
+export const education = {
+  institute: "Vidyalankar Institute of Technology",
+  location: "Mumbai, India - Mumbai University",
+  degree: "B.Tech - Information Technology",
+  duration: "2024 - 2028",
+  cgpa: "9.83",
+  summary:
+    "Strong academic performer building an engineering foundation in AI, machine learning, software systems, and backend development.",
+  focusAreas: [
+    "Artificial Intelligence",
+    "Machine Learning",
+    "AI Systems",
+    "Software Development",
+    "Backend Engineering",
+  ],
+};
 
 export const projects = [
   {
@@ -146,19 +176,38 @@ export const timeline = [
 
 export const achievements = [
   {
-    title: "Hackathon AI Systems",
-    description: "Built production-ready RAG support agents under competitive timelines.",
+    title: "HackerRank Orchestrate May 2026",
+    position: "#125 Global",
+    meta: "1,349 participants - 48 countries",
+    description:
+      "Ranked #125 out of 1,349 participants globally after building a real AI agent from scratch in a 24-hour competitive engineering challenge.",
   },
   {
-    title: "Multi-Agent Architecture",
-    description: "Designed scalable agent workflows for intelligent automation.",
+    title: "TECHSPRINT 2026 - Code MRI",
+    position: "Runner-Up",
+    meta: "AI repository analysis platform",
+    description:
+      "Built an AI-powered repository analysis and code health platform designed for fast, explainable engineering reviews and technical decision-making.",
   },
   {
-    title: "Full Stack AI Products",
-    description: "End-to-end delivery from cinematic UI to robust backend pipelines.",
+    title: "HACKAXIOS - BlueQuant",
+    position: "#19 National",
+    meta: "Blue-carbon MRV and blockchain credits",
+    description:
+      "Developed a blue-carbon MRV and blockchain credit system recognized in a national-level competitive field for sustainability-focused software innovation.",
   },
   {
-    title: "Robotics Simulation",
-    description: "Computer vision pipelines integrated with robotic arm control logic.",
+    title: "INVASION HACK THE GHOST",
+    position: "Top 25",
+    meta: "Competitive hackathon execution",
+    description:
+      "Recognized for quick product thinking, collaboration, and execution under high-pressure hackathon conditions.",
+  },
+  {
+    title: "CODE-A-THON - FinBuddy",
+    position: "Top 14",
+    meta: "Agentic finance assistant",
+    description:
+      "Built an agentic finance assistant with OCR, portfolio intelligence, and personalized financial planning workflows.",
   },
 ];

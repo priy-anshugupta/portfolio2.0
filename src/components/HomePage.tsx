@@ -3,6 +3,7 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Hero } from "@/components/sections/Hero";
 import { LaptopScene } from "@/components/sections/LaptopScene";
+import { Education } from "@/components/sections/Education";
 import { Skills } from "@/components/sections/Skills";
 import { Projects } from "@/components/sections/Projects";
 import { Timeline } from "@/components/sections/Timeline";
@@ -16,6 +17,7 @@ export default function HomePage() {
       <Navbar />
       <Hero />
       <LaptopScene />
+      <Education />
       <Skills />
       <Projects />
       <Timeline />

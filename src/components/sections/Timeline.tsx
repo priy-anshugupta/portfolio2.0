@@ -54,9 +54,13 @@ export function Timeline() {
         subtitle="A path through AI systems, full stack engineering, and robotics."
       >
         <div className="relative mx-auto max-w-3xl">
+          <div className="absolute left-4 top-0 h-full w-[2px] -translate-x-1/2 bg-white/[0.06] md:left-1/2" />
+          <div className="absolute left-4 top-0 z-10 h-4 w-4 -translate-x-1/2 rounded-full border border-white/45 bg-surface shadow-[0_0_22px_rgba(255,255,255,0.22)] md:left-1/2">
+            <span className="absolute left-1/2 top-1/2 h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white" />
+          </div>
           <div
             ref={lineRef}
-            className="absolute left-4 top-0 h-full w-px origin-top scale-y-0 bg-gradient-to-b from-white/30 via-white/10 to-transparent md:left-1/2 md:-translate-x-px"
+            className="absolute left-4 top-0 z-[1] h-full w-[3px] origin-top -translate-x-1/2 scale-y-0 rounded-full bg-gradient-to-b from-white/80 via-white/36 to-white/0 shadow-[0_0_22px_rgba(255,255,255,0.2)] md:left-1/2"
           />
 
           <motion.ol
@@ -76,7 +80,7 @@ export function Timeline() {
                 }`}
               >
                 <div
-                  className={`absolute top-1 h-3 w-3 rounded-full border border-white/30 bg-surface shadow-glow-sm ${
+                  className={`absolute top-1 z-10 h-3 w-3 rounded-full border border-white/35 bg-surface shadow-glow-sm ${
                     i % 2 === 0
                       ? "left-2.5 md:left-auto md:right-[-7px]"
                       : "left-2.5 md:left-[-7px]"

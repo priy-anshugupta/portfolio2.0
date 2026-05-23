@@ -1,0 +1,73 @@
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⨯ Error: Could not find the module "C:\Users\priya\Documents\My Projects\portfolio2.0 git\portfolio2.0\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>) {
+  digest: '3451028093'
+}
+ ⨯ Error: Could not find the module "C:\Users\priya\Documents\My Projects\portfolio2.0 git\portfolio2.0\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '158325977'
+}
+ ⨯ Error: Could not find the module "C:\Users\priya\Documents\My Projects\portfolio2.0 git\portfolio2.0\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '158325977'
+}
+ ⨯ Error: Could not find the module "C:\Users\priya\Documents\My Projects\portfolio2.0 git\portfolio2.0\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '158325977'
+}
+ ⨯ Error: Could not find the module "C:\Users\priya\Documents\My Projects\portfolio2.0 git\portfolio2.0\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>) {
+  digest: '3451028093'
+}
+ ⨯ Error: Could not find the module "C:\Users\priya\Documents\My Projects\portfolio2.0 git\portfolio2.0\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>) {
+  digest: '3451028093'
+}
+ ⨯ [TypeError: __webpack_modules__[moduleId] is not a function] {
+  digest: '1152483668'
+}
+ ⨯ Error: Could not find the module "C:\Users\priya\Documents\My Projects\portfolio2.0 git\portfolio2.0\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>) {
+  digest: '3451028093'
+}
+[TypeError: __webpack_modules__[moduleId] is not a function]
+ ⨯ [TypeError: __webpack_modules__[moduleId] is not a function]
+ ⨯ [TypeError: __webpack_modules__[moduleId] is not a function] {
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\priya\Documents\My Projects\portfolio2.0 git\portfolio2.0\.next\server\next-font-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\priya\\Documents\\My Projects\\portfolio2.0 git\\portfolio2.0\\.next\\server\\next-font-manifest.json',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\priya\Documents\My Projects\portfolio2.0 git\portfolio2.0\.next\server\next-font-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\priya\\Documents\\My Projects\\portfolio2.0 git\\portfolio2.0\\.next\\server\\next-font-manifest.json'
+}
+[Error: ENOENT: no such file or directory, open 'C:\Users\priya\Documents\My Projects\portfolio2.0 git\portfolio2.0\.next\server\next-font-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\priya\\Documents\\My Projects\\portfolio2.0 git\\portfolio2.0\\.next\\server\\next-font-manifest.json',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\priya\Documents\My Projects\portfolio2.0 git\portfolio2.0\.next\build-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\priya\\Documents\\My Projects\\portfolio2.0 git\\portfolio2.0\\.next\\build-manifest.json'
+}
+[Error: ENOENT: no such file or directory, open 'C:\Users\priya\Documents\My Projects\portfolio2.0 git\portfolio2.0\.next\routes-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\priya\\Documents\\My Projects\\portfolio2.0 git\\portfolio2.0\\.next\\routes-manifest.json'
+}
