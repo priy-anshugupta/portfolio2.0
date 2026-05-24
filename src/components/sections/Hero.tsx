@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useRef, useEffect, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { siteConfig } from "@/data/portfolio";
@@ -71,56 +72,81 @@ export function Hero() {
       )}
 
       <motion.div
-        className="relative z-10 mx-auto w-full max-w-7xl"
+        className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-12 lg:grid-cols-[minmax(0,1fr)_390px] xl:grid-cols-[minmax(0,1fr)_430px]"
         variants={heroStagger}
         initial="hidden"
         animate="visible"
       >
-        <motion.div variants={fadeUp}>
-          <AnimatedRoleText />
-        </motion.div>
+        <div>
+          <motion.div variants={fadeUp}>
+            <AnimatedRoleText />
+          </motion.div>
 
-        <motion.h1
-          variants={fadeUp}
-          className="mt-8 max-w-5xl text-5xl font-light leading-[1.05] tracking-tight text-gradient sm:text-6xl md:text-7xl lg:text-[5.5rem]"
-        >
-          {siteConfig.name}
-        </motion.h1>
+          <motion.h1
+            variants={fadeUp}
+            className="mt-8 max-w-5xl font-display text-5xl font-medium leading-[1.02] tracking-normal text-gradient sm:text-6xl md:text-7xl lg:text-[5.5rem]"
+          >
+            {siteConfig.name}
+          </motion.h1>
 
-        <motion.p
-          variants={fadeUp}
-          className="mt-10 max-w-3xl text-xl font-light leading-relaxed text-white/70 md:text-2xl md:leading-relaxed"
-        >
-          {siteConfig.headline}
-        </motion.p>
+          <motion.p
+            variants={fadeUp}
+            className="mt-10 max-w-3xl text-xl font-light leading-relaxed text-white/70 md:text-2xl md:leading-relaxed"
+          >
+            {siteConfig.headline}
+          </motion.p>
 
-        <motion.p
-          variants={fadeUp}
-          className="mt-6 max-w-2xl text-base font-light leading-relaxed text-accent-muted md:text-lg"
-        >
-          {siteConfig.subheadline}
-        </motion.p>
+          <motion.p
+            variants={fadeUp}
+            className="mt-6 max-w-2xl text-base font-light leading-relaxed text-accent-muted md:text-lg"
+          >
+            {siteConfig.subheadline}
+          </motion.p>
+
+          <motion.div
+            variants={fadeUp}
+            className="mt-12 flex flex-wrap gap-4"
+          >
+            <MagneticButton href="#projects" variant="primary">
+              View Projects
+            </MagneticButton>
+            <MagneticButton href="#contact" variant="secondary">
+              Contact Me
+            </MagneticButton>
+          </motion.div>
+
+          <motion.div
+            variants={fadeUp}
+            className="mt-24 flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-white/30"
+            animate={{ y: [0, -6, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <span className="h-px w-8 bg-white/20" />
+            Scroll to explore
+          </motion.div>
+        </div>
 
         <motion.div
           variants={fadeUp}
-          className="mt-12 flex flex-wrap gap-4"
+          className="relative mx-auto mt-4 w-full max-w-[280px] justify-self-center sm:max-w-[320px] lg:mt-0 lg:max-w-[340px] lg:justify-self-end xl:max-w-[380px]"
+          style={{ x: springX, y: springY }}
         >
-          <MagneticButton href="#projects" variant="primary">
-            View Projects
-          </MagneticButton>
-          <MagneticButton href="#contact" variant="secondary">
-            Contact Me
-          </MagneticButton>
-        </motion.div>
-
-        <motion.div
-          variants={fadeUp}
-          className="mt-24 flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-white/30"
-          animate={{ y: [0, -6, 0] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <span className="h-px w-8 bg-white/20" />
-          Scroll to explore
+          <div className="absolute -right-5 top-8 h-full w-full rounded-[30px] border border-white/[0.08] bg-white/[0.035] shadow-[0_28px_80px_rgba(255,255,255,0.04)]" />
+          <div className="absolute -left-6 bottom-10 h-[78%] w-[74%] rounded-[26px] border border-white/[0.07] bg-gradient-to-br from-emerald-300/[0.08] via-white/[0.03] to-transparent blur-[1px]" />
+          <div className="relative overflow-hidden rounded-[30px] border border-white/[0.16] bg-white/[0.045] p-3 shadow-[0_32px_90px_rgba(0,0,0,0.72),inset_0_1px_0_rgba(255,255,255,0.12)] backdrop-blur-md">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[24px] bg-black">
+              <Image
+                src="/images/profile.jpg"
+                alt="Priyanshu Gupta"
+                fill
+                priority
+                sizes="380px"
+                className="object-cover object-[50%_38%]"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,transparent_50%,rgba(0,0,0,0.42)_100%)]" />
+              <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/[0.12]" />
+            </div>
+          </div>
         </motion.div>
       </motion.div>
     </section>

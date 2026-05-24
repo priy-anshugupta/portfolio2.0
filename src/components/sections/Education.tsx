@@ -15,7 +15,7 @@ export function Education() {
       id="education"
       label="Education"
       title="Academic Foundation"
-      subtitle="A strong engineering base in information technology with focused work across AI, ML, backend systems, and production software."
+      subtitle="A strong information technology foundation with a focused academic interest in AI/ML."
     >
       <motion.div
         ref={ref}
@@ -52,15 +52,8 @@ export function Education() {
               {education.summary}
             </p>
 
-            <div className="mt-8 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-              {education.focusAreas.map((area) => (
-                <span
-                  key={area}
-                  className="rounded-lg border border-white/[0.07] bg-black/30 px-3 py-2 text-sm text-white/62"
-                >
-                  {area}
-                </span>
-              ))}
+            <div className="mt-8 inline-flex rounded-full border border-white/[0.1] bg-black/35 px-4 py-2 text-sm font-medium text-white/70 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
+              {education.focus}
             </div>
           </div>
         </motion.article>

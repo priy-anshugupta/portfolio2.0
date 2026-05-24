@@ -178,7 +178,7 @@ export function LaptopScene() {
 
         <div
           ref={laptopRef}
-          className="relative w-full max-w-[980px]"
+          className="relative w-full max-w-[1140px]"
           style={{ transformStyle: "preserve-3d" }}
         >
           <div
@@ -202,20 +202,20 @@ export function LaptopScene() {
                 <div className="pointer-events-none absolute inset-0 z-[3] bg-[radial-gradient(circle_at_50%_45%,transparent_0%,rgba(0,0,0,0.1)_58%,rgba(0,0,0,0.58)_100%)]" />
 
                 <div ref={contentRef} className="absolute inset-0 z-[4] flex items-center overflow-hidden py-[3%]">
-                  <div className="mx-auto w-[88%] max-w-[760px]">
-                    <p className="mb-[clamp(3px,0.5vw,8px)] text-[clamp(0.34rem,0.72vw,0.64rem)] font-semibold uppercase tracking-[0.28em] text-white/45">
+                  <div className="mx-auto w-[90%] max-w-[900px]">
+                    <p className="mb-[clamp(4px,0.62vw,10px)] text-[clamp(0.46rem,0.9vw,0.82rem)] font-semibold uppercase tracking-[0.28em] text-white/45">
                       About Me
                     </p>
-                    <h2 className="max-w-[700px] text-[clamp(0.72rem,2.1vw,2.05rem)] font-light leading-[1.08] tracking-normal text-white">
+                    <h2 className="max-w-[820px] font-display text-[clamp(1rem,2.75vw,2.85rem)] font-medium leading-[1.06] tracking-normal text-white">
                       {aboutContent.tagline}
                     </h2>
-                    <p className="mt-[clamp(4px,1vw,13px)] max-w-[690px] text-[clamp(0.38rem,0.82vw,0.78rem)] leading-relaxed text-white/68">
+                    <p className="mt-[clamp(5px,1vw,15px)] max-w-[840px] text-[clamp(0.5rem,1.02vw,0.98rem)] leading-relaxed text-white/70">
                       {aboutContent.intro}
                     </p>
-                    <p className="mt-[clamp(4px,0.8vw,10px)] hidden max-w-[690px] text-[clamp(0.36rem,0.76vw,0.72rem)] leading-relaxed text-white/52 sm:block">
+                    <p className="mt-[clamp(5px,0.85vw,12px)] hidden max-w-[840px] text-[clamp(0.46rem,0.94vw,0.9rem)] leading-relaxed text-white/56 sm:block">
                       {aboutContent.body}
                     </p>
-                    <p className="mt-[clamp(4px,0.8vw,10px)] max-w-[690px] text-[clamp(0.36rem,0.72vw,0.68rem)] leading-relaxed text-white/46">
+                    <p className="mt-[clamp(5px,0.85vw,12px)] max-w-[840px] text-[clamp(0.44rem,0.9vw,0.86rem)] leading-relaxed text-white/50">
                       {aboutContent.achievement}
                     </p>
 
@@ -225,14 +225,14 @@ export function LaptopScene() {
                           key={card.title}
                           className="min-h-[clamp(24px,3vw,36px)] rounded-[7px] border border-white/[0.1] bg-white/[0.06] px-[clamp(7px,0.85vw,11px)] py-[clamp(5px,0.65vw,8px)] shadow-[inset_0_1px_0_rgba(255,255,255,0.07)] backdrop-blur-md"
                         >
-                          <span className="block text-[clamp(0.48rem,0.68vw,0.66rem)] font-medium leading-snug text-white/84">
+                          <span className="block text-[clamp(0.56rem,0.82vw,0.78rem)] font-medium leading-snug text-white/84">
                             {card.title}
                           </span>
                         </div>
                       ))}
                     </div>
 
-                    <p className="mt-[clamp(8px,1vw,12px)] hidden max-w-[650px] text-[clamp(0.48rem,0.68vw,0.64rem)] italic leading-relaxed text-white/38 md:block">
+                    <p className="mt-[clamp(8px,1vw,14px)] hidden max-w-[780px] text-[clamp(0.54rem,0.8vw,0.76rem)] italic leading-relaxed text-white/42 md:block">
                       {aboutContent.closing}
                     </p>
                   </div>

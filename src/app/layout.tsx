@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Manrope, Space_Grotesk } from "next/font/google";
 import { ClientShell } from "@/components/ClientShell";
 import "./globals.css";
 
-const geist = Geist({
+const manrope = Manrope({
   subsets: ["latin"],
-  variable: "--font-geist-sans",
+  variable: "--font-sans",
+  display: "swap",
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-display",
   display: "swap",
 });
 
@@ -21,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={geist.variable}>
+    <html lang="en" className={`${manrope.variable} ${spaceGrotesk.variable}`}>
       <body className="font-sans">
         <ClientShell>{children}</ClientShell>
       </body>

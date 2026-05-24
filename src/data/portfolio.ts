@@ -96,14 +96,8 @@ export const education = {
   duration: "2024 - 2028",
   cgpa: "9.83",
   summary:
-    "Strong academic performer building an engineering foundation in AI, machine learning, software systems, and backend development.",
-  focusAreas: [
-    "Artificial Intelligence",
-    "Machine Learning",
-    "AI Systems",
-    "Software Development",
-    "Backend Engineering",
-  ],
+    "Strong academic performer building an engineering foundation with a focused interest in AI/ML.",
+  focus: "Focus: AI/ML",
 };
 
 export const projects = [
