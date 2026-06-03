@@ -102,12 +102,40 @@ export const education = {
 
 export const projects = [
   {
+    id: "finbuddy",
+    title: "FinBuddy",
+    description:
+      "AI finance coach with orchestrated LangChain agents, OCR transaction capture, tax comparison, portfolio analysis, and ChromaDB memory.",
+    tech: ["FastAPI", "Next.js", "LangChain", "GPT-5.1", "ChromaDB"],
+    highlight: "Agentic AI / FinTech",
+    category: "Agentic AI / FinTech",
+    agents: "13 agents",
+    longDescription:
+      "FinBuddy is an agentic personal finance assistant that turns raw financial activity into guided decisions. It uses a coordinated agent architecture for transaction extraction, recurring payment detection, tax comparison, portfolio review, and contextual advice.",
+    highlights: [
+      "3-orchestrator, 13-agent LangChain architecture for finance workflows.",
+      "OCR extraction from receipts and SMS-like financial records.",
+      "ChromaDB memory layer for contextual, user-aware financial recommendations.",
+    ],
+    repoUrl: "https://github.com/priy-anshugupta/Finbuddy_AI_Based_Financial_Assistant",
+  },
+  {
     id: "ai-support-agent",
     title: "AI Support Agent",
     description:
       "Multi-company support system with RAG pipeline, hallucination reduction, and grounded responses. Built for hackathon deployment.",
     tech: ["Python", "LangChain", "RAG", "FastAPI", "Vector DB"],
     highlight: "Hackathon Project",
+    category: "AI Systems",
+    agents: "",
+    longDescription:
+      "Multi-company support system with a RAG pipeline, hallucination reduction, and grounded responses. Built for a hackathon deployment with production-ready retrieval flows.",
+    highlights: [
+      "RAG pipeline tuned for accurate, grounded responses.",
+      "Multi-tenant support flows for multiple companies.",
+      "FastAPI backend for rapid deployment.",
+    ],
+    repoUrl: "",
   },
   {
     id: "sports-booking",
@@ -116,14 +144,16 @@ export const projects = [
       "Real-time slot booking with timetable validation, smart scheduling, and lecture conflict prevention.",
     tech: ["Next.js", "PostgreSQL", "TypeScript", "Firebase"],
     highlight: "Full Stack",
-  },
-  {
-    id: "robotics-sim",
-    title: "Robotics Pick-and-Place Simulator",
-    description:
-      "OpenCV object detection with robotic arm simulation, coordinate transformations, and conveyor automation.",
-    tech: ["Python", "OpenCV", "Robotics", "Simulation"],
-    highlight: "Robotics",
+    category: "Full Stack",
+    agents: "",
+    longDescription:
+      "Real-time slot booking platform with timetable validation, smart scheduling, and lecture conflict prevention for campus sports facilities.",
+    highlights: [
+      "Conflict-aware scheduling with timetable validation.",
+      "Realtime booking flow with Postgres and Firebase.",
+      "Responsive Next.js experience for students.",
+    ],
+    repoUrl: "",
   },
   {
     id: "cinematic-portfolio",
@@ -132,6 +162,16 @@ export const projects = [
       "Immersive UI/UX with cinematic frontend animations, fake 3D transitions, and premium motion design.",
     tech: ["Next.js", "Framer Motion", "GSAP", "Lenis"],
     highlight: "Frontend",
+    category: "Frontend Experience",
+    agents: "",
+    longDescription:
+      "Immersive UI/UX with cinematic frontend animations, fake 3D transitions, and premium motion design tailored for a high-end portfolio.",
+    highlights: [
+      "Cinematic motion system using Framer Motion and GSAP.",
+      "Smooth scroll orchestration with Lenis.",
+      "Premium UX focused on storytelling.",
+    ],
+    repoUrl: "",
   },
 ];
 

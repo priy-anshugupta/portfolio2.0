@@ -17,9 +17,11 @@ const duplicatedProjects = [...projects, ...projects];
 function ProjectCard({
   project,
   index,
+  onOpen,
 }: {
   project: (typeof projects)[0];
   index: number;
+  onOpen: (project: (typeof projects)[0]) => void;
 }) {
   const floatOffset = index % 3;
   const floatDelay = (index % 4) * 0.5;
@@ -32,6 +34,15 @@ function ProjectCard({
       }}
       data-cursor
       data-cursor-label="View"
+      role="button"
+      tabIndex={0}
+      onClick={() => onOpen(project)}
+      onKeyDown={(event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          onOpen(project);
+        }
+      }}
     >
       <div className="relative overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.02] p-8 shadow-cinematic backdrop-blur-sm transition-all duration-700 group-hover:border-white/[0.15] group-hover:shadow-glow-sm">
         <div className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full bg-white/[0.03] blur-3xl transition-opacity duration-700 group-hover:opacity-100" />
@@ -65,8 +76,11 @@ function ProjectCard({
           </div>
 
           <div className="mt-8">
-            <MagneticButton href="#contact" variant="secondary">
-              Learn More
+            <MagneticButton
+              variant="secondary"
+              onClick={() => onOpen(project)}
+            >
+              Open Dossier
             </MagneticButton>
           </div>
         </div>
@@ -80,6 +94,7 @@ export function Projects() {
   const trackRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-80px" });
   const [isPaused, setIsPaused] = useState(false);
+  const [activeProject, setActiveProject] = useState<(typeof projects)[0] | null>(null);
   const isDragging = useRef(false);
 
   const x = useMotionValue(0);
@@ -132,6 +147,7 @@ export function Projects() {
                 key={`${project.id}-${i}`}
                 project={project}
                 index={i}
+                onOpen={setActiveProject}
               />
             ))}
           </motion.div>
@@ -141,6 +157,95 @@ export function Projects() {
           </p>
         </motion.div>
       </SectionWrapper>
+
+      {activeProject ? (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-6 py-10 backdrop-blur-sm"
+          onClick={() => setActiveProject(null)}
+        >
+          <div
+            className="relative w-full max-w-5xl rounded-3xl border border-white/[0.08] bg-[#0c0b0b] shadow-[0_40px_120px_rgba(0,0,0,0.55)]"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button
+              type="button"
+              className="absolute right-5 top-5 flex h-10 w-10 items-center justify-center rounded-full border border-white/[0.12] text-white/60 transition hover:text-white"
+              aria-label="Close project details"
+              onClick={() => setActiveProject(null)}
+            >
+              X
+            </button>
+
+            <div className="grid gap-10 px-8 py-10 md:grid-cols-[1.2fr_0.8fr] md:px-12">
+              <div>
+                <p className="text-[10px] font-medium uppercase tracking-[0.35em] text-red-400">
+                  {activeProject.category ?? activeProject.highlight}
+                </p>
+                <div className="mt-3 flex flex-wrap items-center gap-3">
+                  <h3 className="text-3xl font-semibold tracking-tight text-white md:text-4xl">
+                    {activeProject.title}
+                  </h3>
+                  {activeProject.agents ? (
+                    <span className="rounded-full border border-white/[0.15] px-3 py-1 text-[11px] uppercase tracking-[0.25em] text-white/60">
+                      {activeProject.agents}
+                    </span>
+                  ) : null}
+                </div>
+
+                <p className="mt-5 max-w-2xl text-sm leading-relaxed text-white/60">
+                  {activeProject.longDescription ?? activeProject.description}
+                </p>
+
+                <p className="mt-10 text-[11px] font-medium uppercase tracking-[0.35em] text-red-400">
+                  Key Highlights
+                </p>
+                <div className="mt-4 space-y-3">
+                  {(activeProject.highlights ?? []).map((item) => (
+                    <div
+                      key={item}
+                      className="rounded-2xl border border-white/[0.08] bg-white/[0.02] px-4 py-3 text-sm text-white/60"
+                    >
+                      {item}
+                    </div>
+                  ))}
+                  {activeProject.highlights?.length ? null : (
+                    <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] px-4 py-3 text-sm text-white/60">
+                      {activeProject.description}
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              <div className="rounded-2xl border border-white/[0.08] bg-white/[0.015] p-6">
+                <p className="text-[11px] font-medium uppercase tracking-[0.35em] text-red-400">
+                  Tech Stack
+                </p>
+                <div className="mt-4 grid grid-cols-2 gap-3">
+                  {activeProject.tech.map((item) => (
+                    <span
+                      key={item}
+                      className="rounded-xl border border-white/[0.08] bg-black/40 px-3 py-2 text-xs text-white/60"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+
+                {activeProject.repoUrl ? (
+                  <a
+                    href={activeProject.repoUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-6 inline-flex w-full items-center justify-center rounded-xl border border-red-400/60 bg-red-500/90 px-4 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-black transition hover:bg-red-400"
+                  >
+                    Open Repo
+                  </a>
+                ) : null}
+              </div>
+            </div>
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }
