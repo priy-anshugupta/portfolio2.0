@@ -10,7 +10,7 @@ const categoryMeta: Record<string, { icon: string; accent: string; span?: string
   "AI / AI Agents": {
     icon: "AI",
     accent: "from-cyan-400/14 via-white/[0.04] to-transparent",
-    span: "md:col-span-2 md:row-span-2",
+    span: "xl:col-span-2",
   },
   "Machine Learning": {
     icon: "ML",
@@ -31,7 +31,7 @@ const categoryMeta: Record<string, { icon: string; accent: string; span?: string
   "Soft Skills": {
     icon: "EQ",
     accent: "from-rose-400/10 via-transparent to-transparent",
-    span: "md:col-span-2",
+    span: "xl:col-span-2",
   },
 };
 
@@ -115,7 +115,7 @@ export function Skills() {
     >
       <motion.div
         ref={gridRef}
-        className="mb-14 grid auto-rows-fr gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-5"
+        className="mb-14 grid grid-flow-dense auto-rows-min gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-5"
         variants={staggerContainer}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
