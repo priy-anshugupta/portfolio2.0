@@ -13,7 +13,7 @@ export function SmoothScrollProvider({ children }: { children: ReactNode }) {
     const init = async () => {
       try {
         const Lenis = (await import("lenis")).default;
-        lenis = new Lenis({ duration: 1.1, smoothWheel: true });
+        lenis = new Lenis({ duration: 0.68, smoothWheel: true });
 
         const loop = (time: number) => {
           lenis?.raf(time);

@@ -129,7 +129,6 @@ export function Hero() {
         <motion.div
           variants={fadeUp}
           className="relative mx-auto mt-4 w-full max-w-[280px] justify-self-center sm:max-w-[320px] lg:mt-0 lg:max-w-[340px] lg:justify-self-end xl:max-w-[380px]"
-          style={{ x: springX, y: springY }}
         >
           <div className="absolute -right-5 top-8 h-full w-full rounded-[30px] border border-white/[0.08] bg-white/[0.035] shadow-[0_28px_80px_rgba(255,255,255,0.04)]" />
           <div className="absolute -left-6 bottom-10 h-[78%] w-[74%] rounded-[26px] border border-white/[0.07] bg-gradient-to-br from-emerald-300/[0.08] via-white/[0.03] to-transparent blur-[1px]" />
