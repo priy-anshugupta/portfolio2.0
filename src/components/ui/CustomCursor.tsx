@@ -17,12 +17,10 @@ export function CustomCursor() {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
-  const ringX = useSpring(mouseX, { stiffness: 150, damping: 22, mass: 0.5 });
-  const ringY = useSpring(mouseY, { stiffness: 150, damping: 22, mass: 0.5 });
-  const haloX = useSpring(mouseX, { stiffness: 80, damping: 24, mass: 0.8 });
-  const haloY = useSpring(mouseY, { stiffness: 80, damping: 24, mass: 0.8 });
-  const dotX = useSpring(mouseX, { stiffness: 500, damping: 35, mass: 0.2 });
-  const dotY = useSpring(mouseY, { stiffness: 500, damping: 35, mass: 0.2 });
+  const ringX = useSpring(mouseX, { stiffness: 460, damping: 34, mass: 0.22 });
+  const ringY = useSpring(mouseY, { stiffness: 460, damping: 34, mass: 0.22 });
+  const haloX = useSpring(mouseX, { stiffness: 300, damping: 32, mass: 0.28 });
+  const haloY = useSpring(mouseY, { stiffness: 300, damping: 32, mass: 0.28 });
 
   useEffect(() => {
     const isTouch = window.matchMedia("(pointer: coarse)").matches;
@@ -99,7 +97,7 @@ export function CustomCursor() {
       >
         <div
           className="relative -translate-x-1/2 -translate-y-1/2"
-          style={{ width: hovering ? 46 : 30, height: hovering ? 46 : 30 }}
+          style={{ width: hovering ? 40 : 26, height: hovering ? 40 : 26 }}
         >
           <motion.div
             className="absolute inset-0 rounded-full"
@@ -116,13 +114,13 @@ export function CustomCursor() {
             <div className="h-full w-full rounded-full bg-black/55 shadow-[inset_0_0_18px_rgba(255,255,255,0.08)] backdrop-blur-sm" />
           </motion.div>
           <motion.div
-            className="absolute inset-[7px] rounded-full border border-white/[0.16] bg-white/[0.035]"
+            className="absolute inset-[6px] rounded-full border border-white/[0.16] bg-white/[0.035]"
             animate={{ opacity: hovering ? 0.75 : 0.55 }}
           />
-          <span className="absolute left-1/2 top-[-4px] h-[6px] w-px -translate-x-1/2 bg-white/40" />
-          <span className="absolute bottom-[-4px] left-1/2 h-[6px] w-px -translate-x-1/2 bg-white/25" />
-          <span className="absolute left-[-4px] top-1/2 h-px w-[6px] -translate-y-1/2 bg-white/25" />
-          <span className="absolute right-[-4px] top-1/2 h-px w-[6px] -translate-y-1/2 bg-white/40" />
+          <span className="absolute left-1/2 top-[-3px] h-[5px] w-px -translate-x-1/2 bg-white/40" />
+          <span className="absolute bottom-[-3px] left-1/2 h-[5px] w-px -translate-x-1/2 bg-white/25" />
+          <span className="absolute left-[-3px] top-1/2 h-px w-[5px] -translate-y-1/2 bg-white/25" />
+          <span className="absolute right-[-3px] top-1/2 h-px w-[5px] -translate-y-1/2 bg-white/40" />
           <AnimatePresence>
             {label && (
               <motion.span
@@ -140,12 +138,12 @@ export function CustomCursor() {
 
       <motion.div
         className="pointer-events-none fixed left-0 top-0 z-[201] hidden md:block"
-        style={{ x: dotX, y: dotY }}
+        style={{ x: mouseX, y: mouseY }}
         animate={{ opacity: visible ? 1 : 0, scale: clicking ? 0.6 : hovering ? 1.05 : 1 }}
       >
         <div className="relative -translate-x-1/2 -translate-y-1/2">
-          <div className="h-1.5 w-1.5 rounded-full bg-white shadow-[0_0_14px_rgba(255,255,255,0.85),0_0_24px_rgba(142,220,255,0.3)]" />
-          <div className="absolute left-1/2 top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/[0.14]" />
+          <div className="h-1 w-1 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,0.85),0_0_18px_rgba(142,220,255,0.3)]" />
+          <div className="absolute left-1/2 top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/[0.12]" />
         </div>
       </motion.div>
     </>
