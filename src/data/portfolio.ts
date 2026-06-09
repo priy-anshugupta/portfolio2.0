@@ -4,9 +4,9 @@ export const siteConfig = {
   headline: "Building AI Systems That Think, Reason, and Scale",
   subheadline:
     "AI Engineer focused on Multi-Agent Systems, RAG Pipelines, Full Stack AI Applications, and Intelligent Automation.",
-  email: "mailto:priyanshu@example.com",
-  github: "https://github.com",
-  linkedin: "https://linkedin.com",
+  email: "mailto:priyanshug26005@gmail.com",
+  github: "https://github.com/priy-anshugupta",
+  linkedin: "https://www.linkedin.com/in/priyanshu-gupta-039810328/",
 };
 
 export const navLinks = [
@@ -135,25 +135,92 @@ export const projects = [
       "Multi-tenant support flows for multiple companies.",
       "FastAPI backend for rapid deployment.",
     ],
-    repoUrl: "",
+    repoUrl: "https://github.com/priy-anshugupta/rag-support-agent",
   },
   {
     id: "sports-booking",
-    title: "College Sports Booking Platform",
+    title: "SportsDeck",
     description:
-      "Real-time slot booking with timetable validation, smart scheduling, and lecture conflict prevention.",
-    tech: ["Next.js", "PostgreSQL", "TypeScript", "Firebase"],
-    highlight: "Full Stack",
-    category: "Full Stack",
-    agents: "",
+      "Django platform for college sports ground reservations with slot booking, conflict control, and admin-first operations.",
+    tech: ["Django", "PostgreSQL", "HTML/CSS", "Python"],
+    highlight: "Web Development",
+    category: "Web Development",
+    agents: "Slots",
     longDescription:
-      "Real-time slot booking platform with timetable validation, smart scheduling, and lecture conflict prevention for campus sports facilities.",
+      "SportsDeck is a Django platform for college sports ground reservations. It handles slot booking, conflict control, and admin-first operations to keep sports infrastructure scheduling simple and reliable.",
     highlights: [
-      "Conflict-aware scheduling with timetable validation.",
-      "Realtime booking flow with Postgres and Firebase.",
-      "Responsive Next.js experience for students.",
+      "Ground booking slot workflow with conflict prevention.",
+      "Admin-oriented reservation management for college operations.",
+      "Django and PostgreSQL stack focused on practical scheduling needs.",
     ],
-    repoUrl: "",
+    repoUrl: "https://github.com/Aashutosh-Mahajan/Ground-Booking-System",
+  },
+  {
+    id: "bluequant",
+    title: "BlueQuant",
+    description:
+      "Decentralized blue-carbon MRV platform that estimates biomass, converts CO2 equivalents, and mints ERC-20 credits on Ethereum.",
+    tech: ["Django", "Solidity", "Web3.py", "Flutter", "Scikit-learn", "PostgreSQL"],
+    highlight: "Climate Tech / Blockchain",
+    category: "Climate Tech / Blockchain",
+    agents: "SIH Top 45",
+    longDescription:
+      "BlueQuant is a decentralized MRV platform for blue-carbon ecosystems such as mangroves and coastal restoration projects. It estimates biomass from satellite or drone evidence, converts it into CO2 equivalents, and connects the result to tokenized carbon credits.",
+    highlights: [
+      "ML-assisted biomass estimation for blue-carbon reporting.",
+      "ERC-20 carbon credit minting through Solidity, Hardhat, Sepolia, and Web3.py.",
+      "Role-based workflows for NGO, field officer, admin, and corporate users.",
+    ],
+    repoUrl: "https://github.com/Aashutosh-Mahajan/BlueQuant",
+  },
+  {
+    id: "code-mri",
+    title: "Code MRI",
+    description:
+      "Static repo health scanner for maintainability, complexity, documentation quality, security posture, and RAG-powered repo chat.",
+    tech: ["FastAPI", "Next.js", "Gemini", "FAISS", "LangChain", "Radon"],
+    highlight: "Developer Tools / AI",
+    category: "Developer Tools / AI",
+    agents: "<30 sec",
+    longDescription:
+      "Code MRI is a collaborative developer tool that performs static analysis on public GitHub repositories without executing code. It examines complexity, maintainability, documentation quality, and security posture, then supports repo chat through a RAG layer.",
+    highlights: [
+      "Static repo analysis using Radon and AI-generated explanations.",
+      'LangChain and FAISS powered conversational "chat with repo" experience.',
+      "Multi-branch analysis, secret scanning, and per-file complexity color coding.",
+    ],
+    repoUrl: "https://github.com/priy-anshugupta/Code-MRI",
+  },
+  {
+    id: "plexus",
+    title: "Plexus",
+    description:
+      "AI-powered DevEx and security intelligence platform using GraphRAG, knowledge graphs, and multi-agent audit workflows.",
+    tech: [
+      "FastAPI",
+      "Next.js 15",
+      "TypeScript",
+      "LangGraph",
+      "Neo4j",
+      "Qdrant",
+      "Tree-sitter",
+      "Semgrep",
+      "Docker",
+    ],
+    highlight: "AI DevEx / Security",
+    category: "AI DevEx / Security",
+    agents: "GraphRAG",
+    longDescription:
+      "Plexus is an enterprise-grade Developer Experience and Security Posture Management platform powered by Multi-Agent AI and GraphRAG. It analyzes software systems through knowledge graphs, parallel auditing agents, blast-radius intelligence, and role-based generative dashboards.",
+    highlights: [
+      "Graph-based code understanding engine mapping files, functions, APIs, dependencies, and services.",
+      "Parallel Security, Backend, Frontend, Database, DevOps, and Dependency agents orchestrated with LangGraph.",
+      "Blast Radius Visualization for vulnerability propagation across services, APIs, and system components.",
+      "Semantic Time-Travel for natural language exploration of Git history, bug origins, and code evolution.",
+      "Autonomous remediation workflows that generate context-aware fix recommendations and pull requests.",
+      "Cloud, VPC, and on-premise deployment design with SOC2 and ISO 27001 readiness.",
+    ],
+    repoUrl: "https://github.com/priy-anshugupta/Plexus",
   },
   {
     id: "cinematic-portfolio",
@@ -171,7 +238,7 @@ export const projects = [
       "Smooth scroll orchestration with Lenis.",
       "Premium UX focused on storytelling.",
     ],
-    repoUrl: "",
+    repoUrl: "https://github.com/priy-anshugupta/portfolio2.0",
   },
 ];
 
