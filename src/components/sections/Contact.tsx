@@ -57,6 +57,7 @@ export function Contact() {
             LinkedIn
           </MagneticButton>
         </motion.div>
+
       </motion.div>
     </section>
   );
