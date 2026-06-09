@@ -244,34 +244,40 @@ export const projects = [
 
 export const timeline = [
   {
-    year: "2022",
-    title: "Foundations in Full Stack",
+    year: "2024",
+    title: "Engineering Foundations",
     description:
-      "Built core web development skills across React, TypeScript, and modern backend APIs.",
-  },
-  {
-    year: "2023",
-    title: "Learning AI Systems",
-    description:
-      "Explored LLMs, RAG pipelines, and intelligent automation workflows.",
+      "Started my computer engineering journey by building strong foundations in programming, problem-solving, data structures, algorithms, mathematics, and software development.",
   },
   {
     year: "2024",
-    title: "Hackathon & Multi-Agent Work",
+    title: "Web Development",
     description:
-      "Developed AI support agents and multi-company RAG systems in competitive environments.",
-  },
-  {
-    year: "2024",
-    title: "Robotics & Computer Vision",
-    description:
-      "Built pick-and-place simulators with OpenCV detection and coordinate transformations.",
+      "Learned HTML, CSS, JavaScript, React, databases, and backend development while building academic and personal projects.",
   },
   {
     year: "2025",
-    title: "Cinematic Portfolio Engineering",
+    title: "AI & Machine Learning",
     description:
-      "Crafted premium interactive experiences merging AI engineering with elite frontend motion.",
+      "Studied machine learning fundamentals, neural networks, computer vision basics, and modern AI development workflows.",
+  },
+  {
+    year: "2025",
+    title: "LLMs & RAG Systems",
+    description:
+      "Built applications using Large Language Models, Retrieval-Augmented Generation (RAG), vector databases, embeddings, and AI workflows.",
+  },
+  {
+    year: "2026",
+    title: "Multi-Agent AI Systems",
+    description:
+      "Designed multi-agent systems, AI assistants, workflow automation tools, and collaborative AI solutions for complex tasks.",
+  },
+  {
+    year: "2026",
+    title: "Full Stack AI Engineering",
+    description:
+      "Integrated frontend, backend, databases, APIs, and AI models to develop scalable end-to-end intelligent applications.",
   },
 ];
 
