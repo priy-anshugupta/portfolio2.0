@@ -51,7 +51,6 @@ export const skillCategories = [
       "LangChain",
       "LangGraph",
       "Vector Databases",
-      "Pinecone",
       "ChromaDB",
       "Agentic Workflows",
     ],
@@ -163,7 +162,7 @@ export const projects = [
     tech: ["Django", "Solidity", "Web3.py", "Flutter", "Scikit-learn", "PostgreSQL"],
     highlight: "Climate Tech / Blockchain",
     category: "Climate Tech / Blockchain",
-    agents: "SIH Top 45",
+    agents: "",
     longDescription:
       "BlueQuant is a decentralized MRV platform for blue-carbon ecosystems such as mangroves and coastal restoration projects. It estimates biomass from satellite or drone evidence, converts it into CO2 equivalents, and connects the result to tokenized carbon credits.",
     highlights: [
