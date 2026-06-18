@@ -37,7 +37,7 @@ export function Hero() {
   return (
     <section
       ref={containerRef}
-      className="relative flex min-h-screen flex-col justify-center overflow-hidden px-6 pb-8 pt-16 md:px-12 lg:px-20 lg:pb-24 lg:pt-32"
+      className="relative flex flex-col justify-center overflow-hidden px-6 pb-8 pt-28 md:px-12 lg:min-h-screen lg:px-20 lg:pb-24 lg:pt-32"
     >
       {/* Background gradients */}
       <div className="pointer-events-none absolute inset-0">
