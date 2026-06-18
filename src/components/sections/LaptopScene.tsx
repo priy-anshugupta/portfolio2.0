@@ -167,11 +167,11 @@ export function LaptopScene() {
     <section
       ref={sectionRef}
       id="about"
-      className="relative min-h-screen overflow-hidden bg-surface px-4 py-24 sm:px-8 lg:px-12"
+      className="relative overflow-hidden bg-surface px-4 py-12 sm:px-8 lg:min-h-screen lg:px-12 lg:py-24"
     >
       <div
         ref={stageRef}
-        className="relative flex min-h-[calc(100vh-12rem)] items-center justify-center opacity-0"
+        className="relative flex min-h-[60vh] items-center justify-center opacity-0 lg:min-h-[calc(100vh-12rem)]"
         style={{ perspective: "1500px", perspectiveOrigin: "50% 42%" }}
       >
         <div className="pointer-events-none absolute inset-x-0 top-[18%] mx-auto h-[34rem] max-w-[64rem] rounded-full bg-white/[0.035] blur-[110px]" />
