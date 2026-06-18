@@ -55,7 +55,7 @@ function CategoryCard({
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       transition={{ delay: index * 0.08 }}
-      className={`group relative overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.025] p-6 backdrop-blur-md transition-all duration-700 hover:border-white/[0.16] hover:bg-white/[0.045] sm:p-7 ${meta.span ?? ""}`}
+      className={`group relative overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.025] p-6 backdrop-blur-md transition-all duration-700 hover:border-white/[0.16] hover:bg-white/[0.045] sm:p-7 ${meta.span ?? ""} will-change-transform backface-hidden transform-gpu`}
       whileHover={{ y: -6 }}
       data-cursor
     >
@@ -140,7 +140,7 @@ export function Skills() {
         <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-surface to-transparent" />
         <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-surface to-transparent" />
 
-        <div className="flex animate-marquee gap-3 whitespace-nowrap px-4">
+        <div className="flex animate-marquee gap-3 whitespace-nowrap px-4 will-change-transform backface-hidden transform-gpu">
           {[...allSkills, ...allSkills].map((skill, i) => (
             <span
               key={`${skill}-${i}`}

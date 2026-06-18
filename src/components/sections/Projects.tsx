@@ -27,7 +27,7 @@ function ProjectCard({
 
   return (
     <article
-      className="group relative w-[min(340px,85vw)] shrink-0 snap-center md:w-[400px]"
+      className="group relative w-[min(340px,85vw)] shrink-0 snap-center md:w-[400px] will-change-transform backface-hidden transform-gpu"
       style={{
         animation: `project-float ${5 + floatOffset}s ease-in-out ${floatDelay}s infinite`,
       }}
@@ -148,7 +148,7 @@ function ProjectTrack({
 
       <motion.div
         ref={trackRef}
-        className="flex cursor-grab gap-6 py-5 active:cursor-grabbing"
+        className="flex cursor-grab gap-6 py-5 active:cursor-grabbing will-change-transform backface-hidden transform-gpu"
         style={{ x }}
         drag="x"
         dragElastic={0.05}
