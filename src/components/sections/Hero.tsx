@@ -37,7 +37,7 @@ export function Hero() {
   return (
     <section
       ref={containerRef}
-      className="relative flex min-h-screen flex-col justify-center overflow-hidden px-6 pb-12 pt-20 md:px-12 lg:px-20 lg:pb-24 lg:pt-32"
+      className="relative flex min-h-screen flex-col justify-center overflow-hidden px-6 pb-8 pt-16 md:px-12 lg:px-20 lg:pb-24 lg:pt-32"
     >
       {/* Background gradients */}
       <div className="pointer-events-none absolute inset-0">
@@ -72,7 +72,7 @@ export function Hero() {
       )}
 
       <motion.div
-        className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-12 lg:grid-cols-[minmax(0,1fr)_390px] xl:grid-cols-[minmax(0,1fr)_430px]"
+        className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-8 lg:gap-12 lg:grid-cols-[minmax(0,1fr)_390px] xl:grid-cols-[minmax(0,1fr)_430px]"
         variants={heroStagger}
         initial="hidden"
         animate="visible"
@@ -91,7 +91,7 @@ export function Hero() {
 
           <motion.p
             variants={fadeUp}
-            className="mt-10 max-w-3xl text-xl font-light leading-relaxed text-white/70 md:text-2xl md:leading-relaxed"
+            className="mt-6 max-w-3xl text-xl font-light leading-relaxed text-white/70 md:text-2xl md:leading-relaxed lg:mt-10"
           >
             {siteConfig.headline}
           </motion.p>
@@ -105,7 +105,7 @@ export function Hero() {
 
           <motion.div
             variants={fadeUp}
-            className="mt-12 flex flex-wrap gap-4"
+            className="mt-8 flex flex-wrap gap-4 lg:mt-12"
           >
             <MagneticButton href="#projects" variant="primary">
               View Projects
@@ -117,7 +117,7 @@ export function Hero() {
 
           <motion.div
             variants={fadeUp}
-            className="mt-8 flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-white/30 lg:mt-24"
+            className="hidden items-center gap-3 text-xs uppercase tracking-[0.3em] text-white/30 lg:mt-24 lg:flex"
             animate={{ y: [0, -6, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           >
@@ -128,7 +128,7 @@ export function Hero() {
 
         <motion.div
           variants={fadeUp}
-          className="relative mx-auto mt-4 w-full max-w-[280px] justify-self-center sm:max-w-[320px] lg:mt-0 lg:max-w-[340px] lg:justify-self-end xl:max-w-[380px]"
+          className="relative mx-auto mt-0 w-full max-w-[280px] justify-self-center sm:max-w-[320px] lg:max-w-[340px] lg:justify-self-end xl:max-w-[380px]"
         >
           <div className="absolute -right-5 top-8 h-full w-full rounded-[30px] border border-white/[0.08] bg-white/[0.035] shadow-[0_28px_80px_rgba(255,255,255,0.04)]" />
           <div className="absolute -left-6 bottom-10 h-[78%] w-[74%] rounded-[26px] border border-white/[0.07] bg-gradient-to-br from-emerald-300/[0.08] via-white/[0.03] to-transparent blur-[1px]" />
