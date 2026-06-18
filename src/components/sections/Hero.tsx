@@ -37,7 +37,7 @@ export function Hero() {
   return (
     <section
       ref={containerRef}
-      className="relative flex min-h-screen flex-col justify-center overflow-hidden px-6 pb-24 pt-32 md:px-12 lg:px-20"
+      className="relative flex min-h-screen flex-col justify-center overflow-hidden px-6 pb-12 pt-20 md:px-12 lg:px-20 lg:pb-24 lg:pt-32"
     >
       {/* Background gradients */}
       <div className="pointer-events-none absolute inset-0">
@@ -117,7 +117,7 @@ export function Hero() {
 
           <motion.div
             variants={fadeUp}
-            className="mt-24 flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-white/30"
+            className="mt-8 flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-white/30 lg:mt-24"
             animate={{ y: [0, -6, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           >
