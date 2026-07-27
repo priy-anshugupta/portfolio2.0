@@ -63,7 +63,7 @@ export const skillCategories = [
   },
   {
     title: "Frontend",
-    skills: ["React.js", "Next.js", "Tailwind CSS", "JavaScript", "Three.js", "Framer Motion", "Vite"],
+    skills: ["React.js", "Next.js", "Tailwind CSS", "JavaScript"],
   },
   {
     title: "DevOps & Tools",
