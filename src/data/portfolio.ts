@@ -50,7 +50,6 @@ export const skillCategories = [
       "Retrieval Augmented Generation (RAG)",
       "LangChain",
       "LangGraph",
-      "ChromaDB",
       "Agentic Workflows",
     ],
   },
