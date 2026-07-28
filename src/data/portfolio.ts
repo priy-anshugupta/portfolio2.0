@@ -59,7 +59,7 @@ export const skillCategories = [
   },
   {
     title: "Backend Systems",
-    skills: ["FastAPI", "Django", "Flask", "REST APIs", "OAuth", "API Integration", "PostgreSQL"],
+    skills: ["FastAPI", "Django", "REST APIs", "OAuth", "API Integration", "PostgreSQL"],
   },
   {
     title: "Frontend",
