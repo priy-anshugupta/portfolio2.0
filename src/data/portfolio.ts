@@ -97,7 +97,21 @@ export const education = {
   focus: "Focus: AI/ML",
 };
 
-export const projects = [
+export interface ProjectItem {
+  id: string;
+  title: string;
+  description: string;
+  tech: string[];
+  highlight: string;
+  category: string;
+  agents: string;
+  longDescription: string;
+  highlights: string[];
+  repoUrl?: string;
+  liveUrl?: string;
+}
+
+export const projects: ProjectItem[] = [
   {
     id: "finbuddy",
     title: "FinBuddy",
