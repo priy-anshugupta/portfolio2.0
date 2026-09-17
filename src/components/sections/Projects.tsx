@@ -75,7 +75,20 @@ function ProjectCard({
             ))}
           </div>
 
-          <div className="mt-9 flex flex-wrap items-center gap-6 text-[11px] font-semibold uppercase tracking-[0.28em]">
+          <div className="mt-9 flex flex-wrap items-center gap-5 text-[11px] font-semibold uppercase tracking-[0.28em]">
+            {project.liveUrl ? (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="text-red-300 transition hover:text-red-200"
+                onClick={(event) => event.stopPropagation()}
+                data-cursor
+                data-cursor-label="Live"
+              >
+                Live Demo ↗
+              </a>
+            ) : null}
             {project.repoUrl ? (
               <a
                 href={project.repoUrl}
@@ -91,7 +104,7 @@ function ProjectCard({
             ) : null}
             <button
               type="button"
-              className="text-red-300/80 transition hover:text-red-200"
+              className="text-white/50 transition hover:text-white"
               onClick={(event) => {
                 event.stopPropagation();
                 onOpen(project);
@@ -286,18 +299,32 @@ export function Projects() {
                   ))}
                 </div>
 
-                {activeProject.repoUrl ? (
-                  <a
-                    href={activeProject.repoUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="mt-10 inline-flex w-full items-center justify-center rounded-full border border-white/20 bg-white px-4 py-5 text-sm font-semibold uppercase tracking-[0.2em] text-black transition hover:bg-white/90"
-                    data-cursor
-                    data-cursor-label="Repo"
-                  >
-                    Open Repo ↗
-                  </a>
-                ) : null}
+                <div className="mt-10 flex flex-col gap-3">
+                  {activeProject.liveUrl ? (
+                    <a
+                      href={activeProject.liveUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex w-full items-center justify-center rounded-full border border-red-500/40 bg-gradient-to-r from-red-600/30 to-red-500/20 px-4 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-red-200 transition hover:border-red-400/70 hover:bg-red-500/30 hover:text-white"
+                      data-cursor
+                      data-cursor-label="Live"
+                    >
+                      Live Demo ↗
+                    </a>
+                  ) : null}
+                  {activeProject.repoUrl ? (
+                    <a
+                      href={activeProject.repoUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex w-full items-center justify-center rounded-full border border-white/20 bg-white px-4 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-black transition hover:bg-white/90"
+                      data-cursor
+                      data-cursor-label="Repo"
+                    >
+                      Open Repo ↗
+                    </a>
+                  ) : null}
+                </div>
               </div>
             </div>
           </div>
