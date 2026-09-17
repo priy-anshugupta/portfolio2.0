@@ -133,6 +133,26 @@ export const projects: ProjectItem[] = [
     repoUrl: "https://github.com/priy-anshugupta/Sanket-AI",
   },
   {
+    id: "a11yswarm",
+    title: "A11ySwarm",
+    description:
+      "Autonomous web accessibility repair agent built as a typed Google ADK 2 graph with 6 specialist LLMs, Playwright + axe-core scans, AST repairs, and human gate before PR.",
+    tech: ["Google ADK 2", "Python", "FastAPI", "Playwright", "axe-core", "React", "TypeScript", "Gemini"],
+    highlight: "Multi-Agent AI / DevTools",
+    category: "Autonomous Multi-Agent Systems / Web Accessibility",
+    agents: "6 Agents",
+    longDescription:
+      "A11ySwarm is an autonomous accessibility remediation agent for web applications. Implemented as a typed Google ADK 2 graph with six specialist LLM agents, it renders pages in headless Chromium via Playwright, scans them with axe-core, maps findings to isolated source copies, plans and applies conservative AST/source repairs across multiple frameworks (React, Next.js, Vue, Svelte, Angular, HTML), re-scans for regression prevention, and halts at a resumable human gate before committing or creating pull requests.",
+    highlights: [
+      "Typed Google ADK 2 graph featuring conditional routes, transient retries, bounded repair loops (max 5 rounds), and six specialist LLM agents.",
+      "Deterministic Playwright + axe-core scan engine providing screenshots, WCAG A/AA/AAA filtering, and same-origin route discovery across live URLs, local folders, and GitHub repos.",
+      "Multi-framework source mapping and conservative repairs for HTML, CSS, JSX, TSX, Vue, and Svelte with diff hashing and project checks.",
+      "Strict zero-trust security model: isolated workspaces, command allow-lists, diff hashing, approval bound to cryptographic fingerprints, and disabled remote network mutations by default.",
+      "Accessible Vite + React review UI with live before/after diffs, verification snapshots, PR draft generation, and resumable approval workflows.",
+    ],
+    repoUrl: "https://github.com/priy-anshugupta/A11ySwarm-A11ySwarm",
+  },
+  {
     id: "finbuddy",
     title: "FinBuddy",
     description:
