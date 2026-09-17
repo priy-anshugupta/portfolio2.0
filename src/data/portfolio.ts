@@ -153,6 +153,57 @@ export const projects: ProjectItem[] = [
     repoUrl: "https://github.com/priy-anshugupta/A11ySwarm-A11ySwarm",
   },
   {
+    id: "hackhorizon-3d",
+    title: "HackHorizon 3D",
+    description:
+      "Procedural Three.js 3D experiential platform with interactive floating particle meshes, holographic pass studio with iridescent foil shaders, Web Audio synth, and Lenis scroll.",
+    tech: ["Three.js", "WebGL", "Web Audio API", "JavaScript", "Lenis.js", "CSS3"],
+    highlight: "Interactive 3D / WebGL",
+    category: "Procedural 3D WebGL / Interactive Experience",
+    agents: "Three.js",
+    longDescription:
+      "HackHorizon 3D is an interactive, high-performance 3D experiential web platform built with Three.js, procedural WebGL, Lenis smooth scrolling, Web Audio API soundscapes, and vanilla CSS design tokens. Featuring real-time floating particle meshes, a celestial core, an interactive holographic pass studio with pointer-responsive 3D tilt, and client-side canvas PNG generation, it delivers an uncompromising cybernetic visual journey with zero build step.",
+    highlights: [
+      "Procedural Three.js WebGL canvas featuring interactive floating particle meshes, celestial lunar core, geometric data nodes, and camera choreography tied to user scroll.",
+      "Interactive 3D Holographic Pass Studio with real-time gyroscopic/pointer-responsive parallax tilt, iridescent laser foil shader reflections, and 1-click PNG pass export via canvas rendering.",
+      "Pure Web Audio API synthesized ambient cyber chord generator producing rich soundscapes with zero external audio assets or latency.",
+      "Smooth Lenis scroll orchestration paired with responsive glassmorphic UI, dynamic countdown timer, and interactive challenge matrix drawer.",
+    ],
+    repoUrl: "https://github.com/priy-anshugupta/GDG-Task",
+    liveUrl: "https://gdg-task-three.vercel.app/",
+  },
+  {
+    id: "plexus",
+    title: "Plexus",
+    description:
+      "AI-powered DevEx and security intelligence platform using GraphRAG, knowledge graphs, and multi-agent audit workflows.",
+    tech: [
+      "FastAPI",
+      "Next.js 15",
+      "TypeScript",
+      "LangGraph",
+      "Neo4j",
+      "Qdrant",
+      "Tree-sitter",
+      "Semgrep",
+      "Docker",
+    ],
+    highlight: "AI DevEx / Security",
+    category: "AI DevEx / Security",
+    agents: "GraphRAG",
+    longDescription:
+      "Plexus is an enterprise-grade Developer Experience and Security Posture Management platform powered by Multi-Agent AI and GraphRAG. It analyzes software systems through knowledge graphs, parallel auditing agents, blast-radius intelligence, and role-based generative dashboards.",
+    highlights: [
+      "Graph-based code understanding engine mapping files, functions, APIs, dependencies, and services.",
+      "Parallel Security, Backend, Frontend, Database, DevOps, and Dependency agents orchestrated with LangGraph.",
+      "Blast Radius Visualization for vulnerability propagation across services, APIs, and system components.",
+      "Semantic Time-Travel for natural language exploration of Git history, bug origins, and code evolution.",
+      "Autonomous remediation workflows that generate context-aware fix recommendations and pull requests.",
+      "Cloud, VPC, and on-premise deployment design with SOC2 and ISO 27001 readiness.",
+    ],
+    repoUrl: "https://github.com/priy-anshugupta/Plexus",
+  },
+  {
     id: "finbuddy",
     title: "FinBuddy",
     description:
@@ -169,6 +220,42 @@ export const projects: ProjectItem[] = [
       "ChromaDB memory layer for contextual, user-aware financial recommendations.",
     ],
     repoUrl: "https://github.com/priy-anshugupta/Finbuddy_AI_Based_Financial_Assistant",
+  },
+  {
+    id: "code-mri",
+    title: "Code MRI",
+    description:
+      "Static repo health scanner for maintainability, complexity, documentation quality, security posture, and RAG-powered repo chat.",
+    tech: ["FastAPI", "Next.js", "Gemini", "FAISS", "LangChain", "Radon"],
+    highlight: "Developer Tools / AI",
+    category: "Developer Tools / AI",
+    agents: "<30 sec",
+    longDescription:
+      "Code MRI is a collaborative developer tool that performs static analysis on public GitHub repositories without executing code. It examines complexity, maintainability, documentation quality, and security posture, then supports repo chat through a RAG layer.",
+    highlights: [
+      "Static repo analysis using Radon and AI-generated explanations.",
+      'LangChain and FAISS powered conversational "chat with repo" experience.',
+      "Multi-branch analysis, secret scanning, and per-file complexity color coding.",
+    ],
+    repoUrl: "https://github.com/priy-anshugupta/Code-MRI",
+  },
+  {
+    id: "bluequant",
+    title: "BlueQuant",
+    description:
+      "Decentralized blue-carbon MRV platform that estimates biomass, converts CO2 equivalents, and mints ERC-20 credits on Ethereum.",
+    tech: ["Django", "Solidity", "Web3.py", "Flutter", "Scikit-learn", "PostgreSQL"],
+    highlight: "Climate Tech / Blockchain",
+    category: "Climate Tech / Blockchain",
+    agents: "",
+    longDescription:
+      "BlueQuant is a decentralized MRV platform for blue-carbon ecosystems such as mangroves and coastal restoration projects. It estimates biomass from satellite or drone evidence, converts it into CO2 equivalents, and connects the result to tokenized carbon credits.",
+    highlights: [
+      "ML-assisted biomass estimation for blue-carbon reporting.",
+      "ERC-20 carbon credit minting through Solidity, Hardhat, Sepolia, and Web3.py.",
+      "Role-based workflows for NGO, field officer, admin, and corporate users.",
+    ],
+    repoUrl: "https://github.com/Aashutosh-Mahajan/BlueQuant",
   },
   {
     id: "ai-support-agent",
@@ -205,73 +292,6 @@ export const projects: ProjectItem[] = [
       "Django and PostgreSQL stack focused on practical scheduling needs.",
     ],
     repoUrl: "https://github.com/Aashutosh-Mahajan/Ground-Booking-System",
-  },
-  {
-    id: "bluequant",
-    title: "BlueQuant",
-    description:
-      "Decentralized blue-carbon MRV platform that estimates biomass, converts CO2 equivalents, and mints ERC-20 credits on Ethereum.",
-    tech: ["Django", "Solidity", "Web3.py", "Flutter", "Scikit-learn", "PostgreSQL"],
-    highlight: "Climate Tech / Blockchain",
-    category: "Climate Tech / Blockchain",
-    agents: "",
-    longDescription:
-      "BlueQuant is a decentralized MRV platform for blue-carbon ecosystems such as mangroves and coastal restoration projects. It estimates biomass from satellite or drone evidence, converts it into CO2 equivalents, and connects the result to tokenized carbon credits.",
-    highlights: [
-      "ML-assisted biomass estimation for blue-carbon reporting.",
-      "ERC-20 carbon credit minting through Solidity, Hardhat, Sepolia, and Web3.py.",
-      "Role-based workflows for NGO, field officer, admin, and corporate users.",
-    ],
-    repoUrl: "https://github.com/Aashutosh-Mahajan/BlueQuant",
-  },
-  {
-    id: "code-mri",
-    title: "Code MRI",
-    description:
-      "Static repo health scanner for maintainability, complexity, documentation quality, security posture, and RAG-powered repo chat.",
-    tech: ["FastAPI", "Next.js", "Gemini", "FAISS", "LangChain", "Radon"],
-    highlight: "Developer Tools / AI",
-    category: "Developer Tools / AI",
-    agents: "<30 sec",
-    longDescription:
-      "Code MRI is a collaborative developer tool that performs static analysis on public GitHub repositories without executing code. It examines complexity, maintainability, documentation quality, and security posture, then supports repo chat through a RAG layer.",
-    highlights: [
-      "Static repo analysis using Radon and AI-generated explanations.",
-      'LangChain and FAISS powered conversational "chat with repo" experience.',
-      "Multi-branch analysis, secret scanning, and per-file complexity color coding.",
-    ],
-    repoUrl: "https://github.com/priy-anshugupta/Code-MRI",
-  },
-  {
-    id: "plexus",
-    title: "Plexus",
-    description:
-      "AI-powered DevEx and security intelligence platform using GraphRAG, knowledge graphs, and multi-agent audit workflows.",
-    tech: [
-      "FastAPI",
-      "Next.js 15",
-      "TypeScript",
-      "LangGraph",
-      "Neo4j",
-      "Qdrant",
-      "Tree-sitter",
-      "Semgrep",
-      "Docker",
-    ],
-    highlight: "AI DevEx / Security",
-    category: "AI DevEx / Security",
-    agents: "GraphRAG",
-    longDescription:
-      "Plexus is an enterprise-grade Developer Experience and Security Posture Management platform powered by Multi-Agent AI and GraphRAG. It analyzes software systems through knowledge graphs, parallel auditing agents, blast-radius intelligence, and role-based generative dashboards.",
-    highlights: [
-      "Graph-based code understanding engine mapping files, functions, APIs, dependencies, and services.",
-      "Parallel Security, Backend, Frontend, Database, DevOps, and Dependency agents orchestrated with LangGraph.",
-      "Blast Radius Visualization for vulnerability propagation across services, APIs, and system components.",
-      "Semantic Time-Travel for natural language exploration of Git history, bug origins, and code evolution.",
-      "Autonomous remediation workflows that generate context-aware fix recommendations and pull requests.",
-      "Cloud, VPC, and on-premise deployment design with SOC2 and ISO 27001 readiness.",
-    ],
-    repoUrl: "https://github.com/priy-anshugupta/Plexus",
   },
   {
     id: "cinematic-portfolio",
