@@ -113,6 +113,26 @@ export interface ProjectItem {
 
 export const projects: ProjectItem[] = [
   {
+    id: "sanket-ai",
+    title: "SANKET · AI",
+    description:
+      "SIF precursor detection & autonomous Stop Work Authority platform engineered for Oil India Limited (OIL) upstream drilling operations for Smart India Hackathon 2026.",
+    tech: ["Next.js 16", "FastAPI", "PostgreSQL", "Python", "GLiNER", "Cytoscape", "Leaflet", "Whisper"],
+    highlight: "Autonomous Safety AI / SIH 2026",
+    category: "SIH 2026 · Ministry of Petroleum & Natural Gas / Oil India Limited",
+    agents: "7 Stages",
+    longDescription:
+      "SANKET · AI is an enterprise-grade safety intelligence platform engineered specifically for Oil India Limited (OIL) upstream exploration and drilling operations across the Upper Assam Basin (Smart India Hackathon 2026 · Problem Statement SIH26165). Built to prevent catastrophic blowouts like the 2020 Baghjan disaster, SANKET AI fuses unflagged weak signals from handwritten shift logs, multilingual radio memos, and SCADA telemetry into real-time SIF precursor detection, gas dispersion modeling, and autonomous 500m digital permit lockouts.",
+    highlights: [
+      "7-Stage sovereign deterministic + neuro-symbolic pipeline delivering sub-second (<0.2s) safety-critical triage without generative hallucinations.",
+      "8 Purpose-built command workspaces: Triage Queue, Upper Assam GIS Heatmap, Emergency SWA Playbook, DCS SCADA Telemetry Wall, Cytoscape Knowledge Graph, Baghjan 2020 Disaster Replay, Field Voice Studio, and ATEX Zone 1 Worker Terminal.",
+      "Autonomous Stop Work Authority (SWA) engine initiating 1-click rig sirens, dynamic 500m digital electronic permit-to-work (e-PTW) freezes, and containment checklists.",
+      "Pure Web Audio API in-browser chime synthesizer (880Hz→1174Hz) with cross-center event bus and on-device Whisper speech-to-text supporting Assamese, Hindi, and English oilfield vernacular.",
+      "Counterfactual simulation proving automated SWA trigger at Day 5 of the 14-day Baghjan timeline—averting ₹580 Crores loss, 3 fatalities, and 10,000 Ha ecological destruction.",
+    ],
+    repoUrl: "https://github.com/priy-anshugupta/Sanket-AI",
+  },
+  {
     id: "finbuddy",
     title: "FinBuddy",
     description:
